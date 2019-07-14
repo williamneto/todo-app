@@ -7,7 +7,7 @@ const allowCors = require('./cors')
 
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
-server.unsubscribe(allowCors)
+server.use(allowCors)
 
 server.listen(port, function() {
     console.log(`Backend runing on port ${port}`)
